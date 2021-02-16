@@ -1,6 +1,8 @@
 # Genome length normalizer tool
-Script to normalize a microbial abundance table (generated from full genomes databases of taxonomic classifiers) for microbial genome lengths. To use: 
+Script to normalize a microbial species abundance table (generated from a full genomes database of taxonomic classifiers) for microbial genome lengths. 
+Species names follows the NCBI taxonomy. 
 
+Use:
 ```
-gL-normalizer-lite.py <input_table> prokaryotes_viruses_organelles.table <output_table>
+gL-normalizer-lite.py <input_table> prokaryotes_viruses_organelles.table <ouhput_table>
 ```
