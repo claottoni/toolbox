@@ -9,7 +9,7 @@ Use:
 gL-normalizer-lite.py <input_table> prokaryotes_viruses_organelles.table <output_table>
 ```
 
-The output is a tab-separated file reporting the Species-ID, the assembly stage of the genome in NCBI,  with the follo
+The output is a tab-separated file reporting from the first coulumn the Species-ID, the assembly stage of the genome in NCBI, the match level ('exact' when it's at the species level, otherwise 'genus' when a species is missing and a random species with a complete genome of the same genus is used), and the normalized abundaces for each sample.
 ```
 ID	Assembly stage	Length (Mb)	Match	Sample_1	Sample_2	Sample_3
 ```
