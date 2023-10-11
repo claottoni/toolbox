@@ -2,10 +2,10 @@
 
 usage="$(basename "$0") [-h] [-i <string>]
     -h  show this help text
-    -t  <string> path to file accessionTaxa.sql"
+    -i  <string> path to file abundance table"
 
 
-while getopts ":hi:t::" option
+while getopts ":hi::" option
 do
   case $option in
     i) INFILE=${OPTARG};;
@@ -25,8 +25,8 @@ filename=$(basename $INFILE)
 
 
 echo "Getting species list"
-awk -F'\t' '{print $1}' $INFILE | tail -n +2 > ${INFILE}.species
+awk -F'\t' '{print $2}' $INFILE | tail -n +2 > ${INFILE}.idncbi
 echo "Running taxaranks"
-taxaranks -i ${INFILE}.species -o ${INFILE}.taxonomy
+taxaranks -i ${INFILE}.idncbi -o ${INFILE}.taxonomy
 echo "Parsing final table"
 paste ${INFILE}.taxonomy ${INFILE} > ${INFILE}.taxonomy.final
