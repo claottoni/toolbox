@@ -1,5 +1,5 @@
 # Genome length normalizer tool
-Script to normalize a microbial species abundance table (generated from a full genomes database of taxonomic classifiers) for microbial genome lengths. 
+Script used to normalize a microbial species abundance table (generated from a full genomes database of taxonomic classifiers) for microbial genome lengths. 
 Species names follows the NCBI taxonomy. 
 
 The input is a tab-separated file with species names (following the NCBI taxonomy) in the first column, and the microbial abundances for each sample in the other columns. 
