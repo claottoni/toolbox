@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-# this script strips out the info from a flagstat in one text file (redirected from command)
-# Ex: flagstasts.py ~/Desktop/*.txt > results.txt
-
 import re
 import sys
 import os
